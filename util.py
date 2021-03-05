@@ -112,7 +112,7 @@ class SaveHistoryCheckpoint(keras.callbacks.Callback):
         self.history['acc'].append(logs.get('acc'))
         self.history['val_loss'].append(logs.get('val_loss'))
         self.history['val_acc'].append(logs.get('val_acc'))
-        self.history['time'].append(time.time() - (self.history['time'][index - 1] if index else self.init_time))
+        self.history['time'].append(time.time() - (self.init_time))
         self.history['training_time'] = time.time() - self.init_time
         self.history['total_time'] = total_time()
         self.history['peak_memory'] = get_memory()
