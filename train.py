@@ -14,7 +14,7 @@ import util
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 MODEL_NAME = 'meme_text_gen'
 MODEL_PATH = util.get_model_path(BASE_PATH, MODEL_NAME)
-os.mkdir(MODEL_PATH)
+os.makedirs(MODEL_PATH)
 
 
 SEQUENCE_LENGTH = 128
